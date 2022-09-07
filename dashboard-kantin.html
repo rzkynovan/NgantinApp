@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Remix ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Ngantin App</title>
+</head>
+<body class="dashboard-user">
+    <header class="header" id="header">
+        <nav class="nav nav-mobile d-flex px-2 d-lg-none d-md-none container">
+            <a href="#" class="nav__logo">Ngantin App</a>
+
+            <div class="nav__menu container" id="nav-menu">
+                <ul class="nav__list d-grid">
+                    <li class="nav__item">
+                        <a href="dashboard-kantin.html" class="nav__link active-link">
+                            <i class="ri-dashboard-line nav__icon"></i> Dashboard    
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="menu-kantin.html" class="nav__link chart">
+                            <i class="ri-goblet-fill nav__icon"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="ri-user-line nav__icon"></i> Account
+                        </a>
+                    </li>
+                </ul>
+                <i class="ri-close-line nav__close" id="nav-close"></i>  
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-apps-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main container-fluid">
+            <div class="row">
+                <div class="sidebar py-4 col-lg-2 col-md-4 h-100 d-none d-lg-flex d-md-flex flex-column">
+                    <a href="#" class="nav-brand">
+                        <h4>Ngantin App</h4>
+                    </a>
+                    <hr>
+                    <div class="nav-menu h-100 d-flex flex-column justify-content-between">
+                        <nav class="nav flex-column">
+                            <a class="nav-link active d-flex align-items-center gap-2" href="dashboard-kantin.html"><i class="ri-dashboard-line"></i> Dashboard</a>
+                            <a class="nav-link d-flex align-items-center gap-2" href="menu-kantin.html"> <i class="ri-goblet-fill"></i>Kelola Menu</a>
+                          </nav>
+
+                          <div class="account d-flex justify-content-between px-4">
+                              <a href="login.html" class="btn btn-danger d-flex align-items-center gap-2">Logout <i class="ri-logout-box-r-line"></i></a>
+                          </div>
+                    </div>
+
+                </div>
+                <div class="main-content container col-lg-10 col-md-8 py-4">
+                    <div class="d-flex justify-content-between mx-0 mx-lg-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="" class="profile-container p-2 d-flex align-content-center rounded-4" >
+                                <span style="background-image:url(/assets/img/creator.png) ;" class="profile"></a>
+                            <div class="data d-flex flex-column">
+                                <h4><b>Hi, Rizky Novan</b></h4>
+                            <p class="small m-0">Have a Nice Day</p>
+                            </div>
+                        </div>
+
+                        <a href="" class="notif"><i class="ri-notification-3-line"></i></a>
+
+                    </div>
+
+                    <!-- <input type="text" class="form-control mt-4" placeholder="🔎  Find Something here"> -->
+
+                    <div class="menu-mobile container d-md-none d-lg-none mt-4">
+
+                        <div class="menu-wrapper d-flex justify-content-center gap-4">
+                            <a href="menu-kantin.html" class="menu-item d-flex flex-column align-items-center"><i class="ri-goblet-fill"></i>Menu</a>
+                            <a href="#" class="menu-item d-flex flex-column align-items-center"><i class="ri-history-line"></i>Riwayat</a>
+                            
+                        </div>
+                            
+                    </div>
+
+                    <div class="content-container container mt-4 mb-lg-0 mb-md-0">
+                        <div class="row gap-2">
+                            <h4><b>Laporan Penjualan</b></h4>
+                            <div class="card col-lg-3 col-md-5 bg-light">
+                                <div class="card-header d-flex flex-row flex-md-column flex-lg-row justify-content-between">
+                                    <h5>Omzet</h5>
+                                    <p>+ 10%</p>
+                                </div>
+                                <div class="card-body">
+                                    <p>Rp. 1.000.000,00</p>
+                                </div>
+                            </div>
+                            <div class="card col-lg-3 col-md-5 bg-light">
+                                <div class="card-header d-flex flex-row flex-md-column flex-lg-row justify-content-between">
+                                    <h5>Penjualan</h5>
+                                    <p>+ 10 item</p>
+                                </div>
+                                <div class="card-body">
+                                    <p>25 Menu</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5">
+                            <h4><b>Pesanan Kantin</b></h2>
+                                <table class="table mt-2 table-striped overflow-scroll">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nama</th>
+                                        <th scope="col">Menu</th>
+                                        <th scope="col">Quantity</th>
+                                        <th scope="col">Status</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Rizky Novan</td>
+                                        <td>
+                                            <ul>
+                                                <li>Beng beng</li>
+                                                <li>Geprek</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="list-unstyled text-center">
+                                                <li>2</li>
+                                                <li>1</li>
+                                            </ul>
+                                        </td>
+                                        <td><a href="" class="btn btn-success btn-sm">Success</a></td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Aditiya</td>
+                                        <td>
+                                            <ul>
+                                                <li>Beng beng</li>
+                                                <li>Geprek</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="list-unstyled text-center">
+                                                <li>2</li>
+                                                <li>1</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-warning btn-sm text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                                Ubah
+                                            </button>
+                                            
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Ubah Status</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                    <a href="" class="btn btn-success">Set Bayar</a>
+                                                    <a href="" onclick="confirm('apakah anda serius menggagalkan transaksi ini?')" class="btn btn-danger">Set Gagal</a>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td>Rizky Aditiya</td>
+                                        <td>
+                                            <ul>
+                                                <li>Beng beng</li>
+                                                <li>Geprek</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <ul class="list-unstyled text-center">
+                                                <li>2</li>
+                                                <li>1</li>
+                                            </ul>
+                                        </td>
+                                        <td><a href="" class="btn btn-danger text-light btn-sm">No action</a></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+
+</body>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.js"></script>
+
+<!-- Swiper Js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+</html>

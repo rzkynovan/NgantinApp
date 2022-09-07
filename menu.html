@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Remix ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Ngantin App</title>
+</head>
+<body class="menu-content">
+    <header class="header" id="header">
+        <nav class="nav nav-mobile d-flex px-2 d-lg-none d-md-none container">
+            <a href="#" class="nav__logo">Ngantin App</a>
+
+            <div class="nav__menu container" id="nav-menu">
+                <ul class="nav__list d-grid">
+                    <li class="nav__item">
+                        <a href="dashboard-user.html" class="nav__link active-link">
+                            <i class="ri-dashboard-line nav__icon"></i> Dashboard    
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="menu.html" class="nav__link chart">
+                            <i class="ri-goblet-fill nav__icon"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="ri-user-line nav__icon"></i> Account
+                        </a>
+                    </li>
+                </ul>
+                <i class="ri-close-line nav__close" id="nav-close"></i>  
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-apps-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main container-fluid">
+            <div class="row">
+                <div class="sidebar py-4 col-lg-2 col-md-4 h-100 d-none d-lg-flex d-md-flex flex-column">
+                    <a href="#" class="nav-brand">
+                        <h4>Ngantin App</h4>
+                    </a>
+                    <hr>
+                    <div class="nav-menu h-100 d-flex flex-column justify-content-between">
+                        <nav class="nav flex-column">
+                            <a class="nav-link d-flex align-items-center gap-2" href="dashboard-user.html"><i class="ri-dashboard-line"></i> Dashboard</a>
+                            <a class="nav-link active d-flex align-items-center gap-2" href="menu.html"> <i class="ri-goblet-fill"></i>Pilih Menu</a>
+                          </nav>
+
+                          <div class="account d-flex justify-content-between px-4">
+                              <a href="index.html" class="btn btn-danger d-flex align-items-center gap-2">Logout <i class="ri-logout-box-r-line"></i></a>
+                          </div>
+                    </div>
+
+                </div>
+
+                <div class="main-content container col-lg-10 col-md-8 mt-4 pb-5">
+                    <div class="d-flex justify-content-between mx-0 mx-lg-2">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="profile-container p-2 d-flex align-content-center rounded-4" >
+                                <span style="background-image:url(/assets/img/creator.png);" class="profile"></a>
+                            <div class="data d-flex flex-column">
+                                <h4><b>Hi, Rizky Novan</b></h4>
+                            <p class="small m-0">Have a Nice Day</p>
+                            </div>
+                        </div>
+
+                        <!-- Cart -->
+                        <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"  class="notif"><i class="ri-shopping-cart-line"></i></a>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel">Keranjang</h5>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-striped">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Menu</th>
+                                            <th scope="col">Quantity</th>
+                                            <th scope="col">Action</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">1</th>
+                                            <td>Beng Beng</td>
+                                            <td><input class="form-control-sm" min="1" type="number" name="" id=""></td>
+                                            <td><a href="" onclick="confirm('apakah anda ingin menghapus?')" class="btn btn-danger text-light btn-sm">Hapus</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">2</th>
+                                            <td>Ayam Geprek</td>
+                                            <td><input class="form-control-sm" min="1" type="number" name="" id=""></td>
+                                            <td><a href="" class="btn btn-danger text-light btn-sm">Hapus</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">3</th>
+                                            <td>Es Teh</td>
+                                            <td><input class="form-control-sm" min="1" type="number" name="" id=""></td>
+                                            <td><a href="" class="btn btn-danger text-light btn-sm">Hapus</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                <div class="modal-footer d-flex w-100 justify-content-between">
+                                  <p class="small">Total Harga : Rp. 15.000</p>
+                                  <button type="button" class="btn btn-primary">Bayar</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- cart -->
+                    </div>
+
+                    <form action="#" method="post" class="d-flex container align-items-center gap-2 mt-4">
+                        <input type="text" class="form-control" placeholder="🔎  Find Something here">
+                        <button type="submit" class="btn btn-primary px-4">Cari</button>
+                    </form>
+
+                    <div class="menu-container container mt-5">
+                        <div class="most-buy">
+                            <h4><b>Banyak di Beli</b></h4>
+                            <div class="swiper most-buy mt-4">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menus-container mt-4">
+                            <h4><b>Menu Lainnya</b></h4>
+                            <div class="swiper most-buy mt-4">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="swiper-slide">
+                                    <div class="p-0 card">
+                                        <div style="background-image:url(assets/img/esteh.jpg);" class="card-body" >
+                                            <img class="img-fluid" src="assets/img/esteh.jpg" alt="">
+                                        </div>
+                                        <div class="card-footer d-flex flex-column align-items-start">
+                                            <div class="d-flex w-100 justify-content-between">    
+                                                <h4>Es Teh</h4>
+                                                <p class="mb-0">Stock : 10</p>
+                                            </div>
+                                            <div class="d-flex w-100 justify-content-between align-items-center">
+                                                <p>Rp. 5.000</p>
+                                                <a href="" class="btn btn-sm btn-success">Add to chart</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+</body>
+<!-- Bootstrap JS -->
+<script src="assets/js/bootstrap.js"></script>
+
+<!-- Swiper Js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Main JS -->
+<script src="assets/js/main.js"></script>
+</html>
